@@ -4,7 +4,6 @@ const router = express.Router()
 const bcrypt = require('bcrypt')
 const mongoose = require('mongoose')
 const jwt = require('jsonwebtoken')
-const { route } = require('./asset')
 
 
 router.route('/register').post((req, res) => {

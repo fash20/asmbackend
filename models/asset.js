@@ -2,9 +2,10 @@ const mongoose = require('mongoose')
 
 
 const assetSchema = mongoose.Schema({
-    name:{
+    hostname:{
         type:String,
-        required: true
+        required: true,
+        unique:true
     },
     category:{
         type: mongoose.Schema.Types.ObjectId,
@@ -20,8 +21,10 @@ const assetSchema = mongoose.Schema({
         required:'true',
         unique: true
     },
-    Model:{
-        type: String,
+    spec:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref:'Specification',
+        required: true
     },
     rating:{
         type: Number

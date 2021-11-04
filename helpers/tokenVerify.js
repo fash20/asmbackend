@@ -10,7 +10,7 @@ const verifyToken = (req, res, netx) =>{
                 return res.status(403).json({message:"User verification failed"});
             }
             req.user;
-            netx()
+            next()
         });
 
     }

@@ -7,6 +7,10 @@ const categorySchema = mongoose.Schema({
         required: true,
         unique : true
     },
+    group:{
+        type: String,
+        required: true,
+    },
     count:{
         type: Number,
         default:0,
